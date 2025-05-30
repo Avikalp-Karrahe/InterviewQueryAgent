@@ -1,0 +1,18 @@
+# Python venvs
+.venv/
+venv/
+
+# Question bank artifacts
+Question_bank_IQ_categorized/
+Question_bank_IQ_categorized.zip
+
+# byte-compiled / caches
+__pycache__/
+
+# macOS / editor cruft
+.DS_Store
+.vscode/
+Question_bank_IQ_categorized/
+ops.csv
+Question_bank_IQ_categorized/
+ops.csv
