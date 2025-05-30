@@ -19,9 +19,7 @@ from bs4 import BeautifulSoup
 import re
 
 # Set environment variables
-os.environ["OPENAI_API_KEY"] = "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"
-os.environ["NOTION_TOKEN"] = "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"
-os.environ["NOTION_PARENT"] = "20344d2a2c28800eb2f4caec3cebfbd6"
+
 
 def load_data():
     """Load CSV data files"""
