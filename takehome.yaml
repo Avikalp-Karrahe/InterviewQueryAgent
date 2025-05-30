@@ -1,0 +1,46 @@
+mission: >
+  Complete Interview Query Take-home 1 (Meesho DS Guide) and
+  Take-home 2 (Meta Supply-Chain Viz Question).
+  Publish both as child pages under the Notion page you supplied
+  and output URLs plus a form-ready blurb.
+
+env:
+  OPENAI_API_KEY: "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"
+  NOTION_TOKEN:   "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"
+  NOTION_PARENT:  "20344d2a2c28800eb2f4caec3cebfbd6"
+
+plan:
+  - name: Parse briefs
+    goal: Load outline & styling rules
+  - name: Gather data
+    goal: Load CSVs + scrape Meesho interview steps
+  - name: Build Meesho Guide
+    goal: Markdown guide, Mermaid flowchart, Q-sections
+  - name: Build Meta Viz Question
+    goal: Prompt, Q, solution, PNG funnel chart
+  - name: Publish to Notion
+    goal: Create two public child pages under NOTION_PARENT
+  - name: QA & Self-Test
+    goal: Verify public URLs respond 200 & contain required text
+  - name: Output Submission
+    goal: Echo JSON {meesho_url, meta_url, form_blurb}
+
+quality_gates:
+  - n_headers_H4_or_deeper == 0
+  - bullets_per_list <= 5
+  - links_are_anchored == true
+  - QA_status == "PASS"
+
+timeout: 15m
+
+instructions: |
+  1. Read Question_bank_IQ_categorized.csv and ops.csv into pandas.
+  2. Select ≤5 most specific questions per outline section.
+  3. Build Markdown exactly per formatting rules.
+  4. Render interview pipeline with Mermaid; create meta_funnel.png (<50 KB).
+  5. Use notion-client to create two pages under NOTION_PARENT and set them public.
+  6. Self-test each URL (GET 200, contains “Interview Query”).
+  7. Assemble form_blurb:
+       Take-home 1: <meesho_url>
+       Take-home 2: <meta_url>
+  8. Print JSON and exit 0.

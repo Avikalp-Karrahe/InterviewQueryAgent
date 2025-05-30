@@ -1,0 +1,4 @@
+id,interview_experience,interview_questions,interview_process
+200921,"Started with basic DSA (Arrays) and continued to discuss concepts related to Probability, Stats, and Classical Machine Learning (Regression, KMeans Clustering). Then, there was a deep dive into deep learning topics such as CNN and RNN. The interview also covered advanced topics like Vision Transformers, GPT, and LLM parameter efficient fine tuning.",[],
+198485,Whole process was very easy and time consuming and they don’t go deep in concepts. Classical ML questions are a bit difficult. Thanks to Andrew Ng.,"[{""question"": ""Explain BERT vs GPT using multi head attention"", ""solution"": """"}]",1. DSA 2. ML 3. DL/NLP 4. HM
+114577,"I detailed about myself and the worked experience what I have in Machine Learning mainly using deep learning and CNN. Using PyTorch CNN model I have built, handled categorical data.",[],
